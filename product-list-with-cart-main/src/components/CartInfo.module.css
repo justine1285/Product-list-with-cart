@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cartInfoContainer {
+    background-color: hsl(20, 50%, 98%);
+    flex-direction: column;
+    align-self: flex-start;
+    padding: 20px;
+    width: 50%;
+    border-radius: 8px;
+}
+
+.cartInfoContainer img {
+    width: 120px;
+    align-self: center;
+}
+
+.cartInfoHeader {
+    color: hsl(14, 86%, 42%);
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.cartInfoText {
+    color: hsl(7, 20%, 60%);
+    font-weight: 600;
+    align-self: center;
+}
+
+.cartItemList {
+    list-style: none;
+}
+
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid hsl(13, 31%, 94%);
+    margin-bottom: 10px;
+}
+
+.itemName {
+    color: hsl(14, 65%, 9%);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.itemQuantity {
+    font-size: 12px;
+    font-weight: 600;
+    color: hsl(14, 86%, 42%);
+}
+
+.itemPrice {
+    font-size: 12px;
+    color: hsl(14, 25%, 72%);
+    padding-left: 5px;
+}
+
+.updatedPrice {
+    font-size: 13px;
+    color: hsl(7, 20%, 60%);
+    padding-left: 5px;
+}
+
+.deleteButton {
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid hsl(14, 86%, 42%);
+    width: 15px;
+    border-radius: 4px;
+    color: hsl(14, 86%, 42%);
+    cursor: pointer;
+    transition: background-color, color 0.25s;
+}
+
+.deleteButton:hover,
+.deleteButton:active {
+    color: white;
+    background-color: hsl(14, 86%, 42%);
+}
+
+.totalOrder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.total {
+    font-size: 12px;
+}
+
+.totalAmount {
+    font-size: 18px;
+    font-weight: 900;
+    color:hsl(14, 65%, 9%);
+}
+
+.carbonContainer {
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: hsl(13, 31%, 94%);
+    padding: 10px;
+    border-radius: 4px;
+    margin: 15px 0px;
+}
+
+.carbonContainer img{
+    width: 13px;
+    vertical-align: middle;
+}
+
+.carbonText {
+    font-size: 10px;
+    font-weight: 600;
+    color: hsl(14, 65%, 9%);
+}
+
+.confirmOrderButton {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    padding: 10px;
+    background-color: hsl(14, 86%, 42%);
+    color: hsl(13, 31%, 94%);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/*Overlay container*/
+.overlayContainer {
+    position: fixed;
+    top: 7%;
+    left: 35%;
+    width: 30%;
+    height: auto;
+    background-color: hsl(20, 50%, 98%);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0px 0px 100px 100px rgba(0.2, 0.2, 0.2, 0.5);
+    z-index: 10000;
+}
+
+.overlayContent {
+    width: 95%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.overlayContent::-webkit-scrollbar {
+    width: 8px;
+  }
+
+.overlayContainer .iconImage {
+    width: 25px;
+    margin-bottom: 5px;
+}
+
+.overlayContainer header {
+    margin-bottom: 3px;
+}
+
+.overlayContainer p {
+   font-size: 12px;
+   color: hsl(7, 20%, 60%);
+   margin-bottom: 30px;
+}
+
+.overlayContainer ul {
+    list-style: none;
+}
+
+.overlayContainer li img {
+    width: 50px;
+    /* margin-bottom: 10px; */
+}
+
+.overlayContainer div {
+    margin-left: 10px;
+}
+
+.overlayContainer li {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: hsl(13, 31%, 94%);
+    border-bottom: 1px solid hsl(7, 20%, 60%);
+}
+
+.overlayContainer .updatedPrice {
+    margin-left: auto;
+    font-weight: 700;
+}
+
+.overlayContainer .totalOrder {
+    background-color: hsl(13, 31%, 94%);
+    margin-top: 0;
+    margin-left: 0;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+  
+
+@media (max-width: 768px) {
+    .cartInfoContainer {
+        width: 100%;
+    }
+
+    .cartInfoHeader {
+        font-size: 18px;
+    }
+
+    .cartInfoText {
+        font-size: 12px;
+    }
+
+    .overlayContainer {
+        width: 60%;
+        top: 7%;
+        left: 25%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cartInfoContainer {
+        width: 100%;
+    }
+
+    .cartInfoHeader {
+        font-size: 20px;
+    }
+
+    .cartInfoText {
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .overlayContainer {
+        width: 82%;
+        top: 7%;
+        left: 1%;
+    }
+}
